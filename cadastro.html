@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduControl | Cadastro</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar"><a class="logo" href="dashboard.html"><span>EC</span> EduControl</a><button class="menu-toggle" aria-label="Abrir menu">☰</button><nav><a href="dashboard.html">Início</a><a class="active" href="cadastro.html">Cadastro</a><a href="listagem.html">Alunos</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></nav><button class="btn outline logout">Sair</button></header>
+  <main class="container">
+    <div class="page-heading"><div><p class="eyebrow">GESTÃO ACADÊMICA</p><h1>Cadastro de alunos</h1><p class="muted">Adicione um aluno ou edite os dados de um cadastro existente.</p></div><a class="btn outline" href="listagem.html">Ver listagem →</a></div>
+    <section class="panel">
+      <form id="alunoForm" class="form-grid">
+        <input type="hidden" id="alunoId">
+        <div class="field"><label for="nome">Nome completo *</label><input id="nome" required maxlength="100" placeholder="Ex.: Ana Souza"></div>
+        <div class="field"><label for="idade">Idade *</label><input id="idade" type="number" min="1" max="120" required placeholder="Ex.: 16"></div>
+        <div class="field"><label for="sexo">Sexo</label><select id="sexo"><option value="">Selecione</option><option>Feminino</option><option>Masculino</option><option>Não informado</option></select></div>
+        <div class="field"><label for="telefone">Telefone</label><input id="telefone" type="tel" placeholder="(11) 99999-9999"></div>
+        <div class="field span-2"><label for="email">E-mail *</label><input id="email" type="email" required placeholder="aluno@email.com"></div>
+        <div class="form-actions span-2"><button class="btn primary" type="submit" id="salvarBtn">Salvar aluno</button><button class="btn outline" type="reset" id="limparBtn">Limpar campos</button><span id="formStatus" class="status" aria-live="polite"></span></div>
+      </form>
+    </section>
+    <section class="panel"><div class="section-title"><div><h2>Últimos cadastros</h2><p class="muted">Os dados ficam salvos neste navegador.</p></div><a href="listagem.html">Ver todos</a></div><div id="recentes" class="recent-list"></div></section>
+  </main>
+  <footer>© 2026 EduControl · Projeto acadêmico</footer><script src="js/app.js"></script>
+</body>
+</html>
